@@ -1,0 +1,81 @@
+body, html {
+  height: 100%;
+  width: 100%;
+  font-family: lato;
+}
+a, a:link, a:visited, a:hover, a:active {
+  text-decoration:none;
+}
+.menu-background {
+  background-image: url("Patterns/concrete_seamless/concrete_seamless.png");
+}
+.rounded-link:link, .rounded-link:visited {
+  border-radius: 25px;
+  width:35px;
+  height:35px;
+  text-align: center;
+  line-height: 35px;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #00334d;
+  color: #C4D8F4;
+}
+.rounded-link:hover, .rounded-link:active {
+  background-color: #C4D8F4;
+  color: #00334d;
+}
+.units-margin {
+  margin: 7px 25px 15px 5px;
+  display: block;
+  text-align: right;
+}
+.d-ib {
+  display: inline-block;
+  vertical-align: top;
+}
+.icon {
+  font-size: 2.3em;
+  color: #00334d;
+  margin: 7px;
+}
+.title {
+  font-family: Raleway;
+  font-size: 1.5em;
+  font-weight: bolder;
+  color: #00334d;
+}
+.footer {
+    height: 18%;
+    width: 100%;
+    bottom: 0;
+}
+.imageWidth {
+  width: 100%;
+}
+.imageMarging {
+  margin-bottom: 0px;
+}
+.skipScrolling {
+  right: 30px;
+  top: 90px;
+  font-size: 2.3em;
+  position: absolute;
+  color : #FFFFFF;
+  text-shadow: 2px 2px 5px #000000;
+}
+/* Media queries Stars Here */
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+ .units-margin {
+   margin-bottom: 5px;
+   display: inline-block;
+   text-align: left;
+ }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { }
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { }
+/* Media queries Ends Here */

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- To make it work in mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Local Wheather</title>
+  <!-- CSS Starts Here! -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Lato" type='text/css'>
+  <link rel="stylesheet" href="style.css" />
+  <!-- CSS Ends Here! -->
+</head>
+<body class="menu-background">
+  <!-- Sticky Menu Starts Here -->
+  <nav class="navbar navbar-default menu-background imageMarging">
+    <div class="container-fluid">
+      <div class="navbar-left">
+        <div>
+          <h1><i class="wi wi-cloudy icon"></i> <span class="title">Local Weather</span></h1>
+        </div>
+      </div>
+      <div class="navbar-right">
+        <div class="d-ib">
+          <a href="#"><i class="fa fa-map-marker icon" aria-hidden="true"></i></a>
+        </div>
+        <div class="d-ib">
+          <form class="navbar-form" role="search">
+            <div class="form-group d-ib">
+              <input type="text" class="form-control" placeholder="Zipcode">
+            </div>
+            <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
+          </form>
+        </div>
+        <div class="units-margin">
+          <a class="rounded-link d-ib" href="#">&degF</a>
+          <a class="rounded-link d-ib" href="#">&degC</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Stycky Menu Ends Here -->
+
+  <!-- Wheater Image Starts here-->
+  <img id = "weatherImage" class="img-responsive imageWidth" src="Images/mist-trees.jpg" alt=""/>
+  <a class="hidden-xs hidden-sm" href="#footer"><i class="fa fa-angle-double-down skipScrolling" aria-hidden="true"></i></a>
+  <!-- Wheater Image Starts here-->
+
+  <!-- Wheater Info (footer) Starts here-->
+  <div id="footer" class="menu-background footer">
+    <div class="container-fluid">
+      <div class="row col-sm-1 col-sm-offset-1">
+      </div>
+    </div>
+  </div>
+  <!-- Wheater Info (footer) Ends here-->
+
+  <!-- JS Starts Here! -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script src="script.js"></script>
+  <!-- JS Ends Here! -->
+</body>
+</html>
