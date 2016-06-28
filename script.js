@@ -127,8 +127,8 @@ function getWeather (units, lat, lon, zipcode) {
     weatherImage.attr("src", defaultImage);
   });
 
-  var postalCode = "https://api.openweathermap.org/data/2.5/weather?units="+units+"&APPID=3bc5e73c064f2bd80cbb659295a843c8&zip="+zipcode+",us";
-  var currentLocation = "https://api.openweathermap.org/data/2.5/weather?units="+units+"&APPID=3bc5e73c064f2bd80cbb659295a843c8&lat="+lat+"&lon="+lon;
+  var postalCode = "http://api.openweathermap.org/data/2.5/weather?units="+units+"&APPID=3bc5e73c064f2bd80cbb659295a843c8&zip="+zipcode+",us";
+  var currentLocation = "http://api.openweathermap.org/data/2.5/weather?units="+units+"&APPID=3bc5e73c064f2bd80cbb659295a843c8&lat="+lat+"&lon="+lon;
   var query = currentLocation;
   if (zipcode) {
      query = postalCode;
