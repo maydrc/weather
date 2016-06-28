@@ -14,7 +14,15 @@
   <link rel="stylesheet" href="style.css" />
   <!-- CSS Ends Here! -->
 </head>
-<body class="menu-background">
+<body class="menu-background no-scroll">
+
+  <!-- Overlay Starts Here -->
+  <div class="overlay">
+    <div class="loader">
+    </div>
+  </div>
+  <!-- Overlay Menu Starts Here -->
+
   <!-- Sticky Menu Starts Here -->
   <nav class="navbar navbar-default menu-background imageMarging">
     <div class="container-fluid">
@@ -25,19 +33,17 @@
       </div>
       <div class="navbar-right">
         <div class="d-ib">
-          <a href="#"><i class="fa fa-map-marker icon" aria-hidden="true"></i></a>
+          <a id="mapMarkerIcon" href="#"><i class="fa fa-map-marker icon" aria-hidden="true"></i></a>
         </div>
-        <div class="d-ib">
-          <form class="navbar-form" role="search">
-            <div class="form-group d-ib">
-              <input type="text" class="form-control" placeholder="Zipcode">
+        <div class="d-ib form-margin">
+            <div class="d-ib">
+              <input id="txt_value" type="text" class="form-control" placeholder="Zipcode">
             </div>
-            <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
-          </form>
+            <button id="search" type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
         </div>
         <div class="units-margin">
-          <a class="rounded-link d-ib" href="#">&degF</a>
-          <a class="rounded-link d-ib" href="#">&degC</a>
+          <a id="degF" class="rounded-link d-ib selected" href="#">&degF</a>
+          <a id="degC" class="rounded-link d-ib" href="#">&degC</a>
         </div>
       </div>
     </div>
@@ -52,7 +58,13 @@
   <!-- Wheater Info (footer) Starts here-->
   <div id="footer" class="menu-background footer">
     <div class="container-fluid">
-      <div class="row col-sm-1 col-sm-offset-1">
+      <div class="navbar-right">
+        <p id="city" class="title cityMargin rightLocation"></p>
+        <p id="country" class="title countryMargin rightLocation"></p>
+      </div>
+      <div class="navbar-left">
+        <p class="cityMargin d-ib"><span id="temperature" class="leftLocation"></span><i id="degree" class="wi wi-fahrenheit icon"></i></p>
+        <p class="cityMargin d-ib"><i id="icon" class="wi wi-cloudy weatherIcon"></i> <span id="weatherDescription" class="textDescription"></span></p>
       </div>
     </div>
   </div>

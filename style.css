@@ -20,7 +20,7 @@ a, a:link, a:visited, a:hover, a:active {
   background-color: #00334d;
   color: #C4D8F4;
 }
-.rounded-link:hover, .rounded-link:active {
+.rounded-link:hover, .rounded-link:active, .rounded-link.selected {
   background-color: #C4D8F4;
   color: #00334d;
 }
@@ -38,11 +38,40 @@ a, a:link, a:visited, a:hover, a:active {
   color: #00334d;
   margin: 7px;
 }
+.weatherIcon {
+  margin-left: 20px;
+  font-size: 3.5em;
+  color: #00334d;
+}
+.textDescription {
+  font-size: 1.3em;
+  padding: 10px;
+  color: #00334d;
+}
+.form-margin {
+  margin: 9px;
+}
 .title {
   font-family: Raleway;
   font-size: 1.5em;
   font-weight: bolder;
   color: #00334d;
+}
+.cityMargin {
+  margin-top:45px;
+}
+.countryMargin {
+  margin-top:10px;
+}
+.rightLocation {
+  margin-right: 25px;
+  text-align: right;
+}
+.leftLocation {
+  font-size: 3.0em;
+  color: #00334d;
+  margin-left: 5px;
+  text-align: left;
 }
 .footer {
     height: 18%;
@@ -63,6 +92,88 @@ a, a:link, a:visited, a:hover, a:active {
   color : #FFFFFF;
   text-shadow: 2px 2px 5px #000000;
 }
+.no-scroll {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.overlay {
+  position: fixed;;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(100, 100, 100, 0.5);
+  padding: 60% 0;
+}
+.loader {
+  color: #ffffff;
+  font-size: 90px;
+  text-indent: -9999em;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  margin: 72px auto;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load6 1.7s infinite ease;
+  animation: load6 1.7s infinite ease;
+}
+@-webkit-keyframes load6 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+@keyframes load6 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+
 /* Media queries Stars Here */
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
@@ -72,6 +183,9 @@ a, a:link, a:visited, a:hover, a:active {
    margin-bottom: 5px;
    display: inline-block;
    text-align: left;
+ }
+ .overlay {
+   padding: 20% 0;
  }
 }
 /* Medium devices (desktops, 992px and up) */
