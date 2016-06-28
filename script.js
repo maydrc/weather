@@ -239,18 +239,22 @@ function getWeather (units, lat, lon, zipcode) {
 
 function callApis() {
   var zipcode = txtValue.val();
+  var error = false;
   if (zipcode) {
     var isValid = /^\d{5}(?:[\s-]\d{4})?$/.test(zipcode);
     if (isValid) {
       getWeather (units, null, null, zipcode);
     } else {
-        alert('Please enter a valid ZIP / Postal Code');
+      alert('Please enter a valid ZIP / Postal Code');
+      error = true;
     }
   } else {
     getGeolocation(units);
   }
-  overlay.removeClass("hidden");
-  body.addClass("no-scroll");
+  if (!error) {
+    overlay.removeClass("hidden");
+    body.addClass("no-scroll");
+  }
 }
 
 $(document).ready(function() {
